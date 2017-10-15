@@ -14,6 +14,8 @@ namespace GameHog.Data
 
         }
 
+        //All of the tables for the Game Hog database
+        #region Game Hog Tables
         //All stores table
         public DbSet<Store> Stores { get; set; }
         //All of the hardware including game systems table
@@ -29,6 +31,7 @@ namespace GameHog.Data
 
         //All of the genres of game types
         public DbSet<Genre> Genres { get; set; }
+        #endregion
 
     }
 }

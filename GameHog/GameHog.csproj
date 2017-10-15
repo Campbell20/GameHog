@@ -148,7 +148,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\GameHogContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -169,6 +168,18 @@
     <Compile Include="Migrations\201710142212267_AddedMoreForeignKeystoGameTable.cs" />
     <Compile Include="Migrations\201710142212267_AddedMoreForeignKeystoGameTable.Designer.cs">
       <DependentUpon>201710142212267_AddedMoreForeignKeystoGameTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710150137247_UpdatedHardwareModel.cs" />
+    <Compile Include="Migrations\201710150137247_UpdatedHardwareModel.Designer.cs">
+      <DependentUpon>201710150137247_UpdatedHardwareModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710150214559_UpdatedGenresDataAnnotations.cs" />
+    <Compile Include="Migrations\201710150214559_UpdatedGenresDataAnnotations.Designer.cs">
+      <DependentUpon>201710150214559_UpdatedGenresDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710150302557_AddedMostDataAnnotations.cs" />
+    <Compile Include="Migrations\201710150302557_AddedMostDataAnnotations.Designer.cs">
+      <DependentUpon>201710150302557_AddedMostDataAnnotations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Developer.cs" />
@@ -218,11 +229,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Game\Create.cshtml" />
-    <Content Include="Views\Game\Delete.cshtml" />
-    <Content Include="Views\Game\Details.cshtml" />
-    <Content Include="Views\Game\Edit.cshtml" />
-    <Content Include="Views\Game\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -252,6 +258,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710142212267_AddedMoreForeignKeystoGameTable.resx">
       <DependentUpon>201710142212267_AddedMoreForeignKeystoGameTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710150137247_UpdatedHardwareModel.resx">
+      <DependentUpon>201710150137247_UpdatedHardwareModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710150214559_UpdatedGenresDataAnnotations.resx">
+      <DependentUpon>201710150214559_UpdatedGenresDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710150302557_AddedMostDataAnnotations.resx">
+      <DependentUpon>201710150302557_AddedMostDataAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
