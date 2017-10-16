@@ -181,13 +181,20 @@
     <Compile Include="Migrations\201710150302557_AddedMostDataAnnotations.Designer.cs">
       <DependentUpon>201710150302557_AddedMostDataAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710160416301_AddedMoreModels.cs" />
+    <Compile Include="Migrations\201710160416301_AddedMoreModels.Designer.cs">
+      <DependentUpon>201710160416301_AddedMoreModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Accessory.cs" />
     <Compile Include="Models\Developer.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\GameReview.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Hardware.cs" />
     <Compile Include="Models\Publisher.cs" />
     <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\SystemBundle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -267,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710150302557_AddedMostDataAnnotations.resx">
       <DependentUpon>201710150302557_AddedMostDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710160416301_AddedMoreModels.resx">
+      <DependentUpon>201710160416301_AddedMoreModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
