@@ -22,17 +22,17 @@ namespace GameHog.Models
 
         public int HardwareUPCCode { get; set; }
 
-     
-        ////Is this piece of hardware available at a store?
-        //[ForeignKey("StoreId")]
-        //public virtual Store Stores { get; set; }
 
-        ////What publisher is promoting the device?
-        //[ForeignKey("PublisherId")]
-        //public virtual Publisher Publishers { get; set; }
+        //Is this piece of hardware available at a store?
+        [ForeignKey("StoreId")]
+        public virtual Store Stores { get; set; }
 
-        ////What developer created the device?
-        //[ForeignKey("DeveloperId")]
-        //public virtual Developers Developers { get; set; }
+        //What publisher is promoting the device?
+        [ForeignKey("PublisherId")]
+        public virtual Publisher Publishers { get; set; }
+
+        //What developer created the device?
+        [ForeignKey("DeveloperId")]
+        public virtual Developers Developers { get; set; }
     }
 }
