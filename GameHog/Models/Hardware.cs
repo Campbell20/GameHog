@@ -29,6 +29,9 @@ namespace GameHog.Models
         [RegularExpression(@"^((\w+ )*\w+)?$", ErrorMessage = "You cannot have more than 1 space between words.")]
         public string HardwareDescription { get; set; }
 
+        [Required]
+        [DataType(DataType.Currency)]
+        public float? AccessoryPrice { get; set; }
         //Can we only ship to the US (large items can't be shipped outside of the US) or can we ship world wide?
         [Required]
         public bool HardwareShippingUSAOnly { get; set; }

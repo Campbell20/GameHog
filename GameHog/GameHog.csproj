@@ -185,6 +185,14 @@
     <Compile Include="Migrations\201710160416301_AddedMoreModels.Designer.cs">
       <DependentUpon>201710160416301_AddedMoreModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710170006431_AddedCurrency.cs" />
+    <Compile Include="Migrations\201710170006431_AddedCurrency.Designer.cs">
+      <DependentUpon>201710170006431_AddedCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710170055354_AddedForeignKeytoGameReview.cs" />
+    <Compile Include="Migrations\201710170055354_AddedForeignKeytoGameReview.Designer.cs">
+      <DependentUpon>201710170055354_AddedForeignKeytoGameReview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accessory.cs" />
     <Compile Include="Models\Developer.cs" />
@@ -277,6 +285,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710160416301_AddedMoreModels.resx">
       <DependentUpon>201710160416301_AddedMoreModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710170006431_AddedCurrency.resx">
+      <DependentUpon>201710170006431_AddedCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710170055354_AddedForeignKeytoGameReview.resx">
+      <DependentUpon>201710170055354_AddedForeignKeytoGameReview.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

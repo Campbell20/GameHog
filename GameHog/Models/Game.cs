@@ -30,6 +30,10 @@ namespace GameHog.Models
         [RegularExpression(@"^((\w+ )*\w+)?$", ErrorMessage = "You cannot have more than 1 space between words.")]
         public string GameDescription { get; set; }
 
+        [Required]
+        [DataType(DataType.Currency)]
+        public float? GamePrice { get; set; }
+
         //Is the game available in our store?
         [Required]
         public bool GameAvailability { get; set; }

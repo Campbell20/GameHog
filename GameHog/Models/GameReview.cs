@@ -36,5 +36,9 @@ namespace GameHog.Models
         public int GamesId { get; set; }
         [ForeignKey("GamesId")]
         public virtual Game Games { get; set; }
+
+        public int AccesoryId { get; set; }
+        [ForeignKey("AccesoryId")]
+        public virtual Accessory Accessories { get; set; }
     }
 }

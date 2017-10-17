@@ -27,11 +27,30 @@ namespace GameHog.Models
         [RegularExpression(@"^((\w+ )*\w+)?$", ErrorMessage = "You cannot have more than 1 space between words.")]
         public string AccesoryDescription { get; set; }
 
+        [Required]
+        [DataType(DataType.Currency)]
+        public float? AccessoryPrice { get; set; }
+
+        public string AccesoryUPC { get; set; }
 
         //many accessories but only 1 hardware
         public int HardwareId { get; set; }
         [ForeignKey("HardwareId")]
         public virtual Hardware Hardwares { get; set; }
+
+        public int PublisherId { get; set; }
+        [ForeignKey("PublisherId")]
+        public virtual Publisher Publishers { get; set; }
+
+        public int DeveloperId { get; set; }
+        [ForeignKey("DeveloperId")]
+        public virtual Developer Developers { get; set; }
+
+        //public int ReviewId { get; set; }
+        //[ForeignKey("ReviewId")]
+        //public virtual GameReview GameReviews { get; set; }
+
+
 
     }
 }
