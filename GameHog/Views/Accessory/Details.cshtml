@@ -1,0 +1,91 @@
+﻿@model GameHog.Models.Accessory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Accessory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hardwares.HardwareName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hardwares.HardwareName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stores.StoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stores.StoreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoryDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoryDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoryAvailability)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoryAvailability)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoryAvailabilityCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoryAvailabilityCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoryShippingUSAOnly)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoryShippingUSAOnly)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeveloperName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeveloperName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublisherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublisherName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
