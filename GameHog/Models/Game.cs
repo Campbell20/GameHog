@@ -26,7 +26,7 @@ namespace GameHog.Models
         //Can we only ship to the US (large items can't be shipped outside of the US) or can we ship world wide?
         public bool GameShippingUSAOnly { get; set; }
 
-        public int GameUPCCode { get; set; }
+  
 
         public int GameESRBRating { get; set; }
 

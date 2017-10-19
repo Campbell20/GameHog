@@ -49,7 +49,7 @@ namespace GameHog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,HardwareId,HardwareName,HardwareDescription,HardwareAvailability,HardwareAvailabilityCount,HardwareShippingUSAOnly,HardwareUPCCode,HardwareESRBRating,DeveloperName,PublisherName")] Hardware hardware)
+        public ActionResult Create([Bind(Include = "Id,HardwareId,HardwareName,HardwareDescription,HardwareAvailability,HardwareAvailabilityCount,HardwareShippingUSAOnly,HardwareESRBRating,DeveloperName,PublisherName")] Hardware hardware)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace GameHog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,HardwareId,HardwareName,HardwareDescription,HardwareAvailability,HardwareAvailabilityCount,HardwareShippingUSAOnly,HardwareUPCCode,HardwareESRBRating,DeveloperName,PublisherName")] Hardware hardware)
+        public ActionResult Edit([Bind(Include = "Id,HardwareId,HardwareName,HardwareDescription,HardwareAvailability,HardwareAvailabilityCount,HardwareShippingUSAOnly,HardwareESRBRating,DeveloperName,PublisherName")] Hardware hardware)
         {
             if (ModelState.IsValid)
             {

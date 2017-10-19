@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
@@ -24,7 +25,8 @@ namespace GameHog.Models
         public string StorePhysicalZipCode { get; set; }
 
         //Store's hours of operation
-        public DateTime StoreHours { get; set; }
+        [DataType(DataType.MultilineText)]
+        public string StoreHours { get; set; }
         
         //Is this the customer's home location?
         public bool IsHomeStore { get; set; }
