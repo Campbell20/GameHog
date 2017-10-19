@@ -148,8 +148,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccessoryController.cs" />
     <Compile Include="Controllers\GameController.cs" />
+    <Compile Include="Controllers\GenreController.cs" />
+    <Compile Include="Controllers\HardwareController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Data\GameHogContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,12 +174,15 @@
     <Compile Include="Migrations\201710142212267_AddedMoreForeignKeystoGameTable.Designer.cs">
       <DependentUpon>201710142212267_AddedMoreForeignKeystoGameTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710182351561_ChangedModels.cs" />
+    <Compile Include="Migrations\201710182351561_ChangedModels.Designer.cs">
+      <DependentUpon>201710182351561_ChangedModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Developer.cs" />
+    <Compile Include="Models\Accessory.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Hardware.cs" />
-    <Compile Include="Models\Publisher.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -218,11 +225,31 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Accessory\Create.cshtml" />
+    <Content Include="Views\Accessory\Delete.cshtml" />
+    <Content Include="Views\Accessory\Details.cshtml" />
+    <Content Include="Views\Accessory\Edit.cshtml" />
+    <Content Include="Views\Accessory\Index.cshtml" />
     <Content Include="Views\Game\Create.cshtml" />
     <Content Include="Views\Game\Delete.cshtml" />
     <Content Include="Views\Game\Details.cshtml" />
     <Content Include="Views\Game\Edit.cshtml" />
     <Content Include="Views\Game\Index.cshtml" />
+    <Content Include="Views\Genre\Create.cshtml" />
+    <Content Include="Views\Genre\Delete.cshtml" />
+    <Content Include="Views\Genre\Details.cshtml" />
+    <Content Include="Views\Genre\Edit.cshtml" />
+    <Content Include="Views\Genre\Index.cshtml" />
+    <Content Include="Views\Hardware\Create.cshtml" />
+    <Content Include="Views\Hardware\Delete.cshtml" />
+    <Content Include="Views\Hardware\Details.cshtml" />
+    <Content Include="Views\Hardware\Edit.cshtml" />
+    <Content Include="Views\Hardware\Index.cshtml" />
+    <Content Include="Views\Store\Create.cshtml" />
+    <Content Include="Views\Store\Delete.cshtml" />
+    <Content Include="Views\Store\Details.cshtml" />
+    <Content Include="Views\Store\Edit.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -252,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710142212267_AddedMoreForeignKeystoGameTable.resx">
       <DependentUpon>201710142212267_AddedMoreForeignKeystoGameTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710182351561_ChangedModels.resx">
+      <DependentUpon>201710182351561_ChangedModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

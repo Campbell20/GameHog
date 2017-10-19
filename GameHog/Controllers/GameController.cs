@@ -18,7 +18,7 @@ namespace GameHog.Controllers
         // GET: Game
         public ActionResult Index()
         {
-            var games = db.Games.Include(g => g.Developers).Include(g => g.Genres).Include(g => g.Hardwares).Include(g => g.Publishers).Include(g => g.Stores);
+            var games = db.Games.Include(g => g.Genres).Include(g => g.Hardwares).Include(g => g.Stores);
             return View(games.ToList());
         }
 
@@ -40,10 +40,8 @@ namespace GameHog.Controllers
         // GET: Game/Create
         public ActionResult Create()
         {
-            ViewBag.DevelopersId = new SelectList(db.Developers, "DeveloperId", "DeveloperName");
             ViewBag.GenresId = new SelectList(db.Genres, "GenreId", "GenreName");
-            ViewBag.HardwaresId = new SelectList(db.Hardwares, "HardwareId", "HardwareName");
-            ViewBag.PublishersId = new SelectList(db.Publishers, "PublisherId", "PublisherName");
+            ViewBag.HardwaresId = new SelectList(db.Hardwares, "Id", "HardwareName");
             ViewBag.StoresId = new SelectList(db.Stores, "StoreId", "StoreName");
             return View();
         }
@@ -53,7 +51,7 @@ namespace GameHog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "GameId,GameName,GameDescription,GameAvailability,GameAvailabilityCount,GameShippingUSAOnly,GameUPCCode,GameESRBRating,StoresId,HardwaresId,PublishersId,DevelopersId,GenresId")] Game game)
+        public ActionResult Create([Bind(Include = "GameId,GameName,GameDescription,GameAvailability,GameAvailabilityCount,GameShippingUSAOnly,GameUPCCode,GameESRBRating,DeveloperName,PublisherName,StoresId,HardwaresId,GenresId")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -62,10 +60,8 @@ namespace GameHog.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.DevelopersId = new SelectList(db.Developers, "DeveloperId", "DeveloperName", game.DevelopersId);
             ViewBag.GenresId = new SelectList(db.Genres, "GenreId", "GenreName", game.GenresId);
-            ViewBag.HardwaresId = new SelectList(db.Hardwares, "HardwareId", "HardwareName", game.HardwaresId);
-            ViewBag.PublishersId = new SelectList(db.Publishers, "PublisherId", "PublisherName", game.PublishersId);
+            ViewBag.HardwaresId = new SelectList(db.Hardwares, "Id", "HardwareName", game.HardwaresId);
             ViewBag.StoresId = new SelectList(db.Stores, "StoreId", "StoreName", game.StoresId);
             return View(game);
         }
@@ -82,10 +78,8 @@ namespace GameHog.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.DevelopersId = new SelectList(db.Developers, "DeveloperId", "DeveloperName", game.DevelopersId);
             ViewBag.GenresId = new SelectList(db.Genres, "GenreId", "GenreName", game.GenresId);
-            ViewBag.HardwaresId = new SelectList(db.Hardwares, "HardwareId", "HardwareName", game.HardwaresId);
-            ViewBag.PublishersId = new SelectList(db.Publishers, "PublisherId", "PublisherName", game.PublishersId);
+            ViewBag.HardwaresId = new SelectList(db.Hardwares, "Id", "HardwareName", game.HardwaresId);
             ViewBag.StoresId = new SelectList(db.Stores, "StoreId", "StoreName", game.StoresId);
             return View(game);
         }
@@ -95,7 +89,7 @@ namespace GameHog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "GameId,GameName,GameDescription,GameAvailability,GameAvailabilityCount,GameShippingUSAOnly,GameUPCCode,GameESRBRating,StoresId,HardwaresId,PublishersId,DevelopersId,GenresId")] Game game)
+        public ActionResult Edit([Bind(Include = "GameId,GameName,GameDescription,GameAvailability,GameAvailabilityCount,GameShippingUSAOnly,GameUPCCode,GameESRBRating,DeveloperName,PublisherName,StoresId,HardwaresId,GenresId")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -103,10 +97,8 @@ namespace GameHog.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.DevelopersId = new SelectList(db.Developers, "DeveloperId", "DeveloperName", game.DevelopersId);
             ViewBag.GenresId = new SelectList(db.Genres, "GenreId", "GenreName", game.GenresId);
-            ViewBag.HardwaresId = new SelectList(db.Hardwares, "HardwareId", "HardwareName", game.HardwaresId);
-            ViewBag.PublishersId = new SelectList(db.Publishers, "PublisherId", "PublisherName", game.PublishersId);
+            ViewBag.HardwaresId = new SelectList(db.Hardwares, "Id", "HardwareName", game.HardwaresId);
             ViewBag.StoresId = new SelectList(db.Stores, "StoreId", "StoreName", game.StoresId);
             return View(game);
         }

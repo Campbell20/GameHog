@@ -1,0 +1,83 @@
+﻿@model GameHog.Models.Store
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Store</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StorePhysicalStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StorePhysicalStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StorePhysicalCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StorePhysicalCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StorePhysicalState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StorePhysicalState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StorePhysicalZipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StorePhysicalZipCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsHomeStore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsHomeStore)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StoreId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

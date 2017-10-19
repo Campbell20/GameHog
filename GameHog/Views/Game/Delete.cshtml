@@ -13,14 +13,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Developers.DeveloperName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Developers.DeveloperName)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Genres.GenreName)
         </dt>
 
@@ -34,14 +26,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Hardwares.HardwareName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Publishers.PublisherName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Publishers.PublisherName)
         </dd>
 
         <dt>
@@ -106,6 +90,22 @@
 
         <dd>
             @Html.DisplayFor(model => model.GameESRBRating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeveloperName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeveloperName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublisherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublisherName)
         </dd>
 
     </dl>
