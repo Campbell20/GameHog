@@ -178,6 +178,10 @@
     <Compile Include="Migrations\201710182351561_ChangedModels.Designer.cs">
       <DependentUpon>201710182351561_ChangedModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710190008206_ChangedDeveloperModel.cs" />
+    <Compile Include="Migrations\201710190008206_ChangedDeveloperModel.Designer.cs">
+      <DependentUpon>201710190008206_ChangedDeveloperModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accessory.cs" />
     <Compile Include="Models\Game.cs" />
@@ -282,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710182351561_ChangedModels.resx">
       <DependentUpon>201710182351561_ChangedModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710190008206_ChangedDeveloperModel.resx">
+      <DependentUpon>201710190008206_ChangedDeveloperModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
