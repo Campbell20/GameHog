@@ -47,7 +47,7 @@ namespace GameHog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AccessoryId,AccessoryName,AccessoryDescription,AccessoryAvailability,AccessoryAvailabilityCount,AccessoryShippingUSAOnly,AccessoryUPCCode,DeveloperName,PublisherName")] Accessory accessory)
+        public ActionResult Create([Bind(Include = "AccessoryId,AccessoryName,AccessoryDescription,AccessoryAvailability,AccessoryAvailabilityCount,AccessoryShippingUSAOnly,DeveloperName,PublisherName")] Accessory accessory)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace GameHog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AccessoryId,AccessoryName,AccessoryDescription,AccessoryAvailability,AccessoryAvailabilityCount,AccessoryShippingUSAOnly,AccessoryUPCCode,DeveloperName,PublisherName")] Accessory accessory)
+        public ActionResult Edit([Bind(Include = "AccessoryId,AccessoryName,AccessoryDescription,AccessoryAvailability,AccessoryAvailabilityCount,AccessoryShippingUSAOnly,DeveloperName,PublisherName")] Accessory accessory)
         {
             if (ModelState.IsValid)
             {

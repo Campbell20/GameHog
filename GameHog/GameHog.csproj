@@ -182,6 +182,14 @@
     <Compile Include="Migrations\201710190008206_ChangedDeveloperModel.Designer.cs">
       <DependentUpon>201710190008206_ChangedDeveloperModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710190013202_ChangedStoreHourstoString.cs" />
+    <Compile Include="Migrations\201710190013202_ChangedStoreHourstoString.Designer.cs">
+      <DependentUpon>201710190013202_ChangedStoreHourstoString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710190026308_UpdatedModelsAfterTesting.cs" />
+    <Compile Include="Migrations\201710190026308_UpdatedModelsAfterTesting.Designer.cs">
+      <DependentUpon>201710190026308_UpdatedModelsAfterTesting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accessory.cs" />
     <Compile Include="Models\Game.cs" />
@@ -229,6 +237,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Genre\Create.cshtml" />
+    <Content Include="Views\Genre\Delete.cshtml" />
+    <Content Include="Views\Genre\Details.cshtml" />
+    <Content Include="Views\Genre\Edit.cshtml" />
+    <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Accessory\Create.cshtml" />
     <Content Include="Views\Accessory\Delete.cshtml" />
     <Content Include="Views\Accessory\Details.cshtml" />
@@ -239,21 +252,16 @@
     <Content Include="Views\Game\Details.cshtml" />
     <Content Include="Views\Game\Edit.cshtml" />
     <Content Include="Views\Game\Index.cshtml" />
-    <Content Include="Views\Genre\Create.cshtml" />
-    <Content Include="Views\Genre\Delete.cshtml" />
-    <Content Include="Views\Genre\Details.cshtml" />
-    <Content Include="Views\Genre\Edit.cshtml" />
-    <Content Include="Views\Genre\Index.cshtml" />
-    <Content Include="Views\Hardware\Create.cshtml" />
-    <Content Include="Views\Hardware\Delete.cshtml" />
-    <Content Include="Views\Hardware\Details.cshtml" />
-    <Content Include="Views\Hardware\Edit.cshtml" />
-    <Content Include="Views\Hardware\Index.cshtml" />
     <Content Include="Views\Store\Create.cshtml" />
     <Content Include="Views\Store\Delete.cshtml" />
     <Content Include="Views\Store\Details.cshtml" />
     <Content Include="Views\Store\Edit.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Hardware\Create.cshtml" />
+    <Content Include="Views\Hardware\Delete.cshtml" />
+    <Content Include="Views\Hardware\Details.cshtml" />
+    <Content Include="Views\Hardware\Edit.cshtml" />
+    <Content Include="Views\Hardware\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -289,6 +297,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710190008206_ChangedDeveloperModel.resx">
       <DependentUpon>201710190008206_ChangedDeveloperModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710190013202_ChangedStoreHourstoString.resx">
+      <DependentUpon>201710190013202_ChangedStoreHourstoString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710190026308_UpdatedModelsAfterTesting.resx">
+      <DependentUpon>201710190026308_UpdatedModelsAfterTesting.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
