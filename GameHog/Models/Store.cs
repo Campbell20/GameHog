@@ -10,7 +10,7 @@ namespace GameHog.Models
     public class Store
     {
         //Store's unique identification number in the table
-        public int StoreId { get; set; }
+        public int Id { get; set; }
 
         //Store name (such as GameStop, EB Games, etc)
         public string StoreName { get; set; }

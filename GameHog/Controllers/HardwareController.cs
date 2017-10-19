@@ -40,26 +40,58 @@ namespace GameHog.Controllers
         // GET: Hardware/Create
         public ActionResult Create()
         {
-            ViewBag.Id = new SelectList(db.Stores, "StoreId", "StoreName");
+            ViewBag.StoreId = new SelectList(db.Stores, "Id", "StoreName");
             return View();
         }
+
+        //// POST: Hardware/Create
+        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "Id,HardwareName,HardwareDescription,HardwareAvailability,HardwareAvailabilityCount,HardwareShippingUSAOnly,DeveloperName,PublisherName,StoreId")] Hardware hardware)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Hardwares.Add(hardware);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    ViewBag.StoreId = new SelectList(db.Stores, "Id", "StoreName", hardware.StoreId);
+        //    return View(hardware);
+        //}
+
 
         // POST: Hardware/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,HardwareId,HardwareName,HardwareDescription,HardwareAvailability,HardwareAvailabilityCount,HardwareShippingUSAOnly,HardwareESRBRating,DeveloperName,PublisherName")] Hardware hardware)
+        public ActionResult CreateAjax([Bind(Include = "Id,HardwareName,HardwareDescription,HardwareAvailability,HardwareAvailabilityCount,HardwareShippingUSAOnly,DeveloperName,PublisherName,StoreId")] Hardware hardware)
         {
+            ViewBag.StoreId = new SelectList(db.Stores, "Id", "StoreName", hardware.StoreId);
             if (ModelState.IsValid)
             {
+
                 db.Hardwares.Add(hardware);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return this.Json(new
+                {
+                    EnableSuccess = true,
+                    SuccessTitle = "Success",
+                    SuccessMsg = "Success"
+                });
             }
-
-            ViewBag.Id = new SelectList(db.Stores, "StoreId", "StoreName", hardware.Id);
-            return View(hardware);
+            else
+            {
+                return this.Json(new
+                {
+                    EnableError = true,
+                    ErrorTitle = "Error",
+                    ErrorMsg = "Something goes wrong, please try again later"
+                });
+            }
         }
 
         // GET: Hardware/Edit/5
@@ -74,7 +106,7 @@ namespace GameHog.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Id = new SelectList(db.Stores, "StoreId", "StoreName", hardware.Id);
+            ViewBag.StoreId = new SelectList(db.Stores, "Id", "StoreName", hardware.StoreId);
             return View(hardware);
         }
 
@@ -83,7 +115,7 @@ namespace GameHog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,HardwareId,HardwareName,HardwareDescription,HardwareAvailability,HardwareAvailabilityCount,HardwareShippingUSAOnly,HardwareESRBRating,DeveloperName,PublisherName")] Hardware hardware)
+        public ActionResult Edit([Bind(Include = "Id,HardwareName,HardwareDescription,HardwareAvailability,HardwareAvailabilityCount,HardwareShippingUSAOnly,DeveloperName,PublisherName,StoreId")] Hardware hardware)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +123,7 @@ namespace GameHog.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Id = new SelectList(db.Stores, "StoreId", "StoreName", hardware.Id);
+            ViewBag.StoreId = new SelectList(db.Stores, "Id", "StoreName", hardware.StoreId);
             return View(hardware);
         }
 

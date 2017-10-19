@@ -148,9 +148,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AccessoryController.cs" />
-    <Compile Include="Controllers\GameController.cs" />
-    <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HardwareController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
@@ -158,37 +155,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710142045333_FirstMigration.cs" />
-    <Compile Include="Migrations\201710142045333_FirstMigration.Designer.cs">
-      <DependentUpon>201710142045333_FirstMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710142202101_CreatedMostTables.cs" />
-    <Compile Include="Migrations\201710142202101_CreatedMostTables.Designer.cs">
-      <DependentUpon>201710142202101_CreatedMostTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710142211329_AddedForeignKeystoGameTable.cs" />
-    <Compile Include="Migrations\201710142211329_AddedForeignKeystoGameTable.Designer.cs">
-      <DependentUpon>201710142211329_AddedForeignKeystoGameTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710142212267_AddedMoreForeignKeystoGameTable.cs" />
-    <Compile Include="Migrations\201710142212267_AddedMoreForeignKeystoGameTable.Designer.cs">
-      <DependentUpon>201710142212267_AddedMoreForeignKeystoGameTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710182351561_ChangedModels.cs" />
-    <Compile Include="Migrations\201710182351561_ChangedModels.Designer.cs">
-      <DependentUpon>201710182351561_ChangedModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710190008206_ChangedDeveloperModel.cs" />
-    <Compile Include="Migrations\201710190008206_ChangedDeveloperModel.Designer.cs">
-      <DependentUpon>201710190008206_ChangedDeveloperModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710190013202_ChangedStoreHourstoString.cs" />
-    <Compile Include="Migrations\201710190013202_ChangedStoreHourstoString.Designer.cs">
-      <DependentUpon>201710190013202_ChangedStoreHourstoString.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710190026308_UpdatedModelsAfterTesting.cs" />
-    <Compile Include="Migrations\201710190026308_UpdatedModelsAfterTesting.Designer.cs">
-      <DependentUpon>201710190026308_UpdatedModelsAfterTesting.cs</DependentUpon>
+    <Compile Include="Migrations\201710190253089_FirstMigration.cs" />
+    <Compile Include="Migrations\201710190253089_FirstMigration.Designer.cs">
+      <DependentUpon>201710190253089_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accessory.cs" />
@@ -211,9 +180,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\custom-form.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -237,21 +209,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Genre\Create.cshtml" />
-    <Content Include="Views\Genre\Delete.cshtml" />
-    <Content Include="Views\Genre\Details.cshtml" />
-    <Content Include="Views\Genre\Edit.cshtml" />
-    <Content Include="Views\Genre\Index.cshtml" />
-    <Content Include="Views\Accessory\Create.cshtml" />
-    <Content Include="Views\Accessory\Delete.cshtml" />
-    <Content Include="Views\Accessory\Details.cshtml" />
-    <Content Include="Views\Accessory\Edit.cshtml" />
-    <Content Include="Views\Accessory\Index.cshtml" />
-    <Content Include="Views\Game\Create.cshtml" />
-    <Content Include="Views\Game\Delete.cshtml" />
-    <Content Include="Views\Game\Details.cshtml" />
-    <Content Include="Views\Game\Edit.cshtml" />
-    <Content Include="Views\Game\Index.cshtml" />
     <Content Include="Views\Store\Create.cshtml" />
     <Content Include="Views\Store\Delete.cshtml" />
     <Content Include="Views\Store\Details.cshtml" />
@@ -280,29 +237,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710142045333_FirstMigration.resx">
-      <DependentUpon>201710142045333_FirstMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710142202101_CreatedMostTables.resx">
-      <DependentUpon>201710142202101_CreatedMostTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710142211329_AddedForeignKeystoGameTable.resx">
-      <DependentUpon>201710142211329_AddedForeignKeystoGameTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710142212267_AddedMoreForeignKeystoGameTable.resx">
-      <DependentUpon>201710142212267_AddedMoreForeignKeystoGameTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710182351561_ChangedModels.resx">
-      <DependentUpon>201710182351561_ChangedModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710190008206_ChangedDeveloperModel.resx">
-      <DependentUpon>201710190008206_ChangedDeveloperModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710190013202_ChangedStoreHourstoString.resx">
-      <DependentUpon>201710190013202_ChangedStoreHourstoString.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710190026308_UpdatedModelsAfterTesting.resx">
-      <DependentUpon>201710190026308_UpdatedModelsAfterTesting.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710190253089_FirstMigration.resx">
+      <DependentUpon>201710190253089_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
