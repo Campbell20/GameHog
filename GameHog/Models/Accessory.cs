@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -8,7 +9,7 @@ namespace GameHog.Models
     public class Accessory
     {
         //database idenity number for all hardware devices
-        public int AccessoryId { get; set; }
+        public int Id { get; set; }
 
         //The name of the hardware device
         public string AccessoryName { get; set; }
@@ -32,7 +33,15 @@ namespace GameHog.Models
         public string PublisherName { get; set; }
 
 
+        //Is this piece of hardware available at a store?
+        public int StoreId { get; set; }
+        [ForeignKey("StoreId")]
+        public virtual Store Stores { get; set; }
 
+        //What hardware is this game tied too?
+        public int HardwareId { get; set; }
+        [ForeignKey("HardwareId")]
+        public virtual Hardware Hardwares { get; set; }
 
     }
 }

@@ -9,7 +9,7 @@ namespace GameHog.Models
     //This is the genre of the game... Is it an FPS,RTS, Roleplaying? 
     public class Genre
     {
-        public int GenreId { get; set; }
+        public int Id { get; set; }
         public string GenreName { get; set; }
         public string GenreDescription { get; set; }
     }

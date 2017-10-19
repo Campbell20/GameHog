@@ -9,7 +9,7 @@ namespace GameHog.Models
     public class Hardware
     {
         //database idenity number for all hardware devices
-        public int HardwareId { get; set; }
+        public int Id { get; set; }
 
         //The name of the hardware device
         public string HardwareName { get; set; }
@@ -28,7 +28,7 @@ namespace GameHog.Models
 
  
 
-        public int HardwareESRBRating { get; set; }
+
 
 
         public string DeveloperName { get; set; }
@@ -36,8 +36,8 @@ namespace GameHog.Models
         public string PublisherName { get; set; }
 
         //Is this piece of hardware available at a store?
-        public int Id { get; set; }
-        [ForeignKey("Id")]
+        public int StoreId { get; set; }
+        [ForeignKey("StoreId")]
         public virtual Store Stores { get; set; }
 
 

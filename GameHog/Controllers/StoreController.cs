@@ -42,21 +42,55 @@ namespace GameHog.Controllers
             return View();
         }
 
+        //// POST: Store/Create
+        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "Id,StoreName,LocationName,StorePhysicalStreet,StorePhysicalCity,StorePhysicalState,StorePhysicalZipCode,StoreHours,IsHomeStore")] Store store)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Stores.Add(store);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    return View(store);
+        //}
+
+
+
         // POST: Store/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "StoreId,StoreName,LocationName,StorePhysicalStreet,StorePhysicalCity,StorePhysicalState,StorePhysicalZipCode,StoreHours,IsHomeStore")] Store store)
+        public ActionResult CreateAjax([Bind(Include = "Id,StoreName,LocationName,StorePhysicalStreet,StorePhysicalCity,StorePhysicalState,StorePhysicalZipCode,StoreHours,IsHomeStore")] Store store)
         {
             if (ModelState.IsValid)
             {
                 db.Stores.Add(store);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+         
+                return this.Json(new
+                {
+                    EnableSuccess = true,
+                    SuccessTitle = "Success",
+                    SuccessMsg = "Success"
+                });
+            }
+            else
+            {
+                return this.Json(new
+                {
+                    EnableError = true,
+                    ErrorTitle = "Error",
+                    ErrorMsg = "Something goes wrong, please try again later"
+                });
             }
 
-            return View(store);
+     
         }
 
         // GET: Store/Edit/5
@@ -79,7 +113,7 @@ namespace GameHog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "StoreId,StoreName,LocationName,StorePhysicalStreet,StorePhysicalCity,StorePhysicalState,StorePhysicalZipCode,StoreHours,IsHomeStore")] Store store)
+        public ActionResult Edit([Bind(Include = "Id,StoreName,LocationName,StorePhysicalStreet,StorePhysicalCity,StorePhysicalState,StorePhysicalZipCode,StoreHours,IsHomeStore")] Store store)
         {
             if (ModelState.IsValid)
             {
