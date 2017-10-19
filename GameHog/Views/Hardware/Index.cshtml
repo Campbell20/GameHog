@@ -1,0 +1,94 @@
+﻿@model IEnumerable<GameHog.Models.Hardware>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Stores.StoreName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HardwareId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HardwareName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HardwareDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HardwareAvailability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HardwareAvailabilityCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HardwareShippingUSAOnly)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HardwareUPCCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HardwareESRBRating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeveloperName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublisherName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stores.StoreName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HardwareId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HardwareName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HardwareDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HardwareAvailability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HardwareAvailabilityCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HardwareShippingUSAOnly)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HardwareUPCCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HardwareESRBRating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeveloperName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublisherName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

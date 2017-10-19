@@ -14,25 +14,34 @@ namespace GameHog.Models
         //The name of the hardware device
         public string HardwareName { get; set; }
 
-        //A given description from a fan site, or the game develpoers themselves. If not present, then our employees will have to create one
+        //A given description from a review site, or the Hardware develpoers themselves. If not present, then our employees will have to create one
         public string HardwareDescription { get; set; }
+
+        //Is the Hardware available in our store?
+        public bool HardwareAvailability { get; set; }
+
+        //How many games do we have at the store?
+        public int HardwareAvailabilityCount { get; set; }
 
         //Can we only ship to the US (large items can't be shipped outside of the US) or can we ship world wide?
         public bool HardwareShippingUSAOnly { get; set; }
 
         public int HardwareUPCCode { get; set; }
 
+        public int HardwareESRBRating { get; set; }
+
+
+        public string DeveloperName { get; set; }
+
+        public string PublisherName { get; set; }
 
         //Is this piece of hardware available at a store?
-        [ForeignKey("StoreId")]
+        public int Id { get; set; }
+        [ForeignKey("Id")]
         public virtual Store Stores { get; set; }
 
-        //What publisher is promoting the device?
-        [ForeignKey("PublisherId")]
-        public virtual Publisher Publishers { get; set; }
 
-        //What developer created the device?
-        [ForeignKey("DeveloperId")]
-        public virtual Developers Developers { get; set; }
+
+      
     }
 }

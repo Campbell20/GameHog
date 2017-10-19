@@ -62,6 +62,11 @@ namespace GameHog.Models
         public int GameESRBRating { get; set; }
 
 
+        public string DeveloperName { get; set; }
+
+        public string PublisherName { get; set; }
+
+
 
         //Is this piece of hardware available at a store?
         public int StoresId { get; set; }
@@ -71,17 +76,7 @@ namespace GameHog.Models
         //What hardware is this game tied too?
         public int HardwaresId { get; set; }
         [ForeignKey("HardwaresId")]
-        public virtual Hardware Hardwares { get; set; }
-
-        //What publisher is promoting the game?
-        public int PublishersId { get; set; }
-        [ForeignKey("PublishersId")]
-        public virtual Publisher Publishers { get; set; }
-
-        //What developer created the device?
-        public int DevelopersId { get; set; }
-        [ForeignKey("DevelopersId")]
-        public virtual Developer Developers { get; set; }
+        public virtual Hardware Hardwares { get; set; }   
 
         //What type of game is the game?
         public int GenresId { get; set; }
