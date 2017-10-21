@@ -11,6 +11,7 @@ using GameHog.Models;
 
 namespace GameHog.Controllers
 {
+    //Added a comment to commit changes to master branch
     public class AccessoryController : Controller
     {
         private GameHogContext db = new GameHogContext();
