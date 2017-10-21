@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
@@ -9,48 +8,40 @@ namespace GameHog.Models
 {
     public class Accessory
     {
-        public int AccessoryId { get; set; }
+        //database idenity number for all hardware devices
+        public int Id { get; set; }
 
-        [Required]
-        [DataType(DataType.Text)]
-        //This keeps the string length lower than 255 characters.
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "The name must be between 3 and 50 characters only.")]
-        //This regular expression will take any length string but requires the user to only use 1 space between words or letters.
-        [RegularExpression(@"^((\w+ )*\w+)?$", ErrorMessage = "You cannot have more than 1 space between words.")]
+        //The name of the hardware device
         public string AccessoryName { get; set; }
 
-        [Required]
-        [DataType(DataType.MultilineText)]
-        //This keeps the string length lower than 255 characters.
-        [StringLength(500, MinimumLength = 3, ErrorMessage = "The description must be between 3 and 500 characters only.")]
-        //This regular expression will take any length string but requires the user to only use 1 space between words or letters.
-        [RegularExpression(@"^((\w+ )*\w+)?$", ErrorMessage = "You cannot have more than 1 space between words.")]
-        public string AccesoryDescription { get; set; }
+        //A given description from a review site, or the Accessory develpoers themselves. If not present, then our employees will have to create one
+        public string AccessoryDescription { get; set; }
 
-        [Required]
-        [DataType(DataType.Currency)]
-        public float? AccessoryPrice { get; set; }
+        //Is the Accessory available in our store?
+        public bool AccessoryAvailability { get; set; }
 
-        public string AccesoryUPC { get; set; }
+        //How many Accessorys do we have at the store?
+        public int AccessoryAvailabilityCount { get; set; }
 
-        //many accessories but only 1 hardware
+        //Can we only ship to the US (large items can't be shipped outside of the US) or can we ship world wide?
+        public bool AccessoryShippingUSAOnly { get; set; }
+
+     
+
+        public string DeveloperName { get; set; }
+
+        public string PublisherName { get; set; }
+
+
+        //Is this piece of hardware available at a store?
+        public int StoreId { get; set; }
+        [ForeignKey("StoreId")]
+        public virtual Store Stores { get; set; }
+
+        //What hardware is this game tied too?
         public int HardwareId { get; set; }
         [ForeignKey("HardwareId")]
         public virtual Hardware Hardwares { get; set; }
-
-        public int PublisherId { get; set; }
-        [ForeignKey("PublisherId")]
-        public virtual Publisher Publishers { get; set; }
-
-        public int DeveloperId { get; set; }
-        [ForeignKey("DeveloperId")]
-        public virtual Developer Developers { get; set; }
-
-        //public int ReviewId { get; set; }
-        //[ForeignKey("ReviewId")]
-        //public virtual GameReview GameReviews { get; set; }
-
-
 
     }
 }

@@ -14,32 +14,15 @@ namespace GameHog.Data
 
         }
 
-        //All of the tables for the Game Hog database
-        #region Game Hog Tables
         //All stores table
         public DbSet<Store> Stores { get; set; }
-       
         //All of the hardware including game systems table
         public DbSet<Hardware> Hardwares { get; set; }
-        
-        //All of the accesories for a game or game system
-        public DbSet<Accessory> Accesories { get; set; }
-
         //All of teh games for every system table
         public DbSet<Game> Games { get; set; }
-
-        //All of the publishers for all hardware and games
-        public DbSet<Publisher> Publishers { get; set; }
-       
-        //All of the developers for all hardware and games
-        public DbSet<Developer> Developers { get; set; }
-
         //All of the genres of game types
         public DbSet<Genre> Genres { get; set; }
 
-        //All of the reviews for a game or game system
-        public DbSet<GameReview> GameReviews { get; set; }
-        #endregion
-
+        public System.Data.Entity.DbSet<GameHog.Models.Accessory> Accessories { get; set; }
     }
 }

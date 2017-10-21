@@ -7,13 +7,13 @@ namespace GameHog.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddedForeignKeystoGameTable : IMigrationMetadata
+    public sealed partial class FirstMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedForeignKeystoGameTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(FirstMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710142211329_AddedForeignKeystoGameTable"; }
+            get { return "201710190253089_FirstMigration"; }
         }
         
         string IMigrationMetadata.Source
